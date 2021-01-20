@@ -5,20 +5,20 @@ var colors = [["#586F6B", "#7F9183", "#B8B8AA", "#CFC0BD", "#DDD5D0"],
               ["#191716", "#D83137", "#804D54", "#B592A0", "#C6B8CC"]];
 
 var choice = Math.floor(Math.random() * (5));
-var pallet = colors[choice];
+var palette = colors[choice];
 
 function setup() {
   var p5Canvas = createCanvas(400, 400);
-  background(pallet[0]);
-  b1 = new ball(8, pallet[1]);
-  b2 = new ball(12, pallet[2]);
-  b3 = new ball(16, pallet[3]);
-  b4 = new ball(20, pallet[4]);
+  background(palette[0]);
+  b1 = new ball(8, palette[1]);
+  b2 = new ball(12, palette[2]);
+  b3 = new ball(16, palette[3]);
+  b4 = new ball(20, palette[4]);
   // all trailing lines will be
 }
 
 function draw() {
-  background(pallet[0]);
+  background(palette[0]);
   b1.draw();
   b2.draw();
   b3.draw();

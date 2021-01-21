@@ -14,7 +14,6 @@ function setup() {
   b2 = new ball(12, palette[2]);
   b3 = new ball(16, palette[3]);
   b4 = new ball(20, palette[4]);
-  // all trailing lines will be
 }
 
 function draw() {

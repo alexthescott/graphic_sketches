@@ -7,4 +7,3 @@
 ---
 <img width="50" src="./bounce_path/gifs/bg_gif_thumb.gif"> [bounce path](https://github.com/alexthescott/p5.js-sketches/tree/main/bounce_path)
 ---
-z

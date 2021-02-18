@@ -47,17 +47,18 @@ def draw():
     
 class ripple():
     def __init__(self, pos):
-        self.ripples = []
+        self.ripple_r = []
         self.speed = 0.4
-        self.max_size = 2.25 * ((width * width) + (height * height)) ** 0.5
         self.spawn_rate = 5
+        self.max_size = 2.25 * ((width * width) + (height * height)) ** 0.5
+        self.x = None
+        self.y = None 
         
         ripple_gap = self.speed * self.spawn_rate * 60
-        num_of_ripples = int(1 + self.max_size / ripple_gap)
+        num_of_ripples = int(self.max_size / ripple_gap)
         
-        # prepopulate the ripples
-        for i in range(num_of_ripples, -1, -1):
-            self.ripples.insert(0, i * ripple_gap)
+        for i in range(num_of_ripples):
+            self.ripple_r.append(i * ripple_gap)
         
         # decide corner to draw from
         if pos == 0:
@@ -74,17 +75,15 @@ class ripple():
             self.y = height + height/10
         
     def draw(self):
-        # spawn new ripples at a regular frequency
-        if frameCount % (self.spawn_rate * 60) == 0:
-            self.ripples.insert(0, 0.0)
-        
-        removed = 0
-        for i, ripple in enumerate(self.ripples):
-            # pop from list if ripple is too large
-            if ripple >= self.max_size:
-               del self.ripples[-1]
-               removed += 1
+            # spawn new ripple at a self.spawn_rate
+            if frameCount % (self.spawn_rate * 60) == 0:
+                self.ripple_r.insert(0, 0.0)
             
-            # draw and grow ripple
-            circle(self.x, self.y, ripple)
-            self.ripples[i-removed] += self.speed
+            for i, ripple in enumerate(self.ripple_r):
+                # pop ripples that are too large....
+                if ripple > self.max_size: 
+                    del self.ripple_r[-1]
+                else:
+                    # draw and grow ripple
+                    circle(self.x, self.y, ripple)
+                    self.ripple_r[i] += self.speed

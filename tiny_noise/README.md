@@ -14,4 +14,4 @@ A tricolored representation of [perlin noise](https://en.wikipedia.org/wiki/Perl
 	<img width="300" src="./stills/tiny_noise_3.png">
 </p> 
 
-alexthescott - 2/2/21
+alexthescott - 2/27/21

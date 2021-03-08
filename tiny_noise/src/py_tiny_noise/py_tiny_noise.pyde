@@ -1,4 +1,7 @@
-# tiny noise -> Alex Scott ... cell_size / (width || height) must be an int
+# tiny noise
+# Alex Scott, 2020
+# -> ... cell_size / (width || height) must be an int
+
 from random import randint
 
 cell_size = 8
@@ -35,7 +38,8 @@ def draw():
             
             x_cir = cos(time)
             y_cir = sin(time)
-            c = noise(x_off, y_off, x_cir/time_frailty + y_cir/time_frailty)
+            # print(x_cir + y_cir)
+            c = noise(x_off, y_off, x_cir + y_cir)
     
             if c >= 0.55:
                 fill(palette[1])

@@ -1,6 +1,8 @@
 # Sketches
 
 ---
+<img width="50" src="./worm_noise/gifs/worm_noise_gif_thumb.gif"> [worm_noise](https://github.com/alexthescott/p5.js-sketches/tree/main/worm_noise)
+---
 <img width="50" src="./tiny_noise/gifs/tiny_noise_gif_thumb.gif"> [tiny_noise](https://github.com/alexthescott/p5.js-sketches/tree/main/tiny_noise)
 ---
 <img width="50" src="./random_walk/gifs/mm_rw_gif_thumb.gif"> [random_walk](https://github.com/alexthescott/p5.js-sketches/tree/main/random_walk)

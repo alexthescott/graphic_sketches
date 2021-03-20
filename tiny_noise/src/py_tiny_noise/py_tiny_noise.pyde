@@ -8,7 +8,7 @@ cell_size = 8
 noise_const = 0.05
 time = 0 
 time_vel = 1
-time_frailty = 3 # how much should time move noise?
+time_frailty = 20 # how much should time move noise?
 slant = map(random(0, 1), 0, 1, -2, 2)
 
 palettes = [['#273043', '#F02D3A', '#EFF6EE'],
@@ -31,15 +31,19 @@ def draw():
     background(palette[0])
     x_grid = width // cell_size
     y_grid = height // cell_size
+    
+    x_cir = cos(time)
+    y_cir = sin(time)
+    z_pos = x_cir+y_cir
     for x in range(x_grid):
         for y in range(y_grid):
             x_off = x * noise_const / slant if slant != 0 else x * noise_const
             y_off = y * noise_const * slant if slant != 0 else y * noise_const 
             
-            x_cir = cos(time)
-            y_cir = sin(time)
-            # print(x_cir + y_cir)
-            c = noise(x_off, y_off, x_cir + y_cir)
+            x_pos = float(x) / time_frailty
+            y_pos = float(y) / time_frailty
+
+            c = noise(x_pos, y_pos, z_pos)
     
             if c >= 0.55:
                 fill(palette[1])

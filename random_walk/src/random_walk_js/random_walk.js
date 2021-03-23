@@ -50,66 +50,72 @@ class random_walk {
     }
   }
 
-  update() {
-    if (this.steps > 0) {
-      // 0 -> up, 1 -> down, 2 -> right, 3 -> left
-      let direction = null;
-      let weight = 1;
-      if (this.orientation == 0){
-        direction = getRandomInt(0, 1);
-        // 14% chance if horizontal has a thicker stroke
-        if(getRandomInt(0, 50) < 7){
-          weight = getRandomInt(3, 6);
-        }
-      } else{
-        direction = getRandomInt(2, 3)
-        // coin flip if horizontal has a thicker stroke
-        if(getRandomInt(0, 1) == 1){
-          weight = getRandomInt(3, 6);
-        }
-      }
-      
-      let new_x = this.front_x;
-      let new_y = this.front_y;
-      
-      // after determining the direction, 'bounce' the 
-      // line_len value if moving to that space would
-      // put ut outside of the border
-      if (direction == 0) {
-        // move up, bounce down if needed
-        let dist = this.front_y - this.border;
-        let line_len = getRandomInt(3, dist/this.vert_const);
-        new_y -= line_len;
-      } else if (direction == 1) {
-        // move down, bounce up if needed  
-        let dist = height - this.front_y - this.border;
-        let line_len = getRandomInt(3, dist/this.vert_const);
-        new_y += line_len;
-      } else if (direction == 2) {
-        // move right, bounce left if needed  
-        let dist = width - this.border - this.front_x;
-        let line_len = getRandomInt(3, dist/this.hori_const);
-        new_x += line_len
-      } else if (direction == 3){
-        // move left, bounce right if needed  
-        let dist = this.front_x - this.border;
-        let line_len = getRandomInt(3, dist/this.hori_const);
-        new_x -= line_len;
-      }
-      this.points.push([new_x, new_y]);
-      this.strokeWeights.push(weight);
-      this.front_x = new_x;
-      this.front_y = new_y;
-            
-      if(this.orientation == 0){
-        this.orientation = 1;
-      } else{
-        this.orientation = 0;
-      }
-      this.steps--;
-    }
+    update() {
+      	if (this.steps > 0) {
+	        // 0 -> up, 1 -> down, 2 -> right, 3 -> left
+	        let direction = null;
+	        let weight = 1;
+	        if (this.orientation === 0){
+	          	direction = getRandomInt(0, 1);
+	          	// 14% chance if horizontal has a thicker stroke
+	          	if(getRandomInt(0, 50) < 7){
+	            	weight = getRandomInt(3, 6);
+	          	}
+	        } else{
+	          	direction = getRandomInt(2, 3)
+	          	// coin flip if horizontal has a thicker stroke
+	          	if(getRandomInt(0, 1) === 1){
+	            	weight = getRandomInt(3, 6);
+	          	}
+	        }
+	        
+	        let new_x = this.front_x;
+	        let new_y = this.front_y;
+	        
+	        // after determining the direction, 'bounce' the 
+	        // line_len value if moving to that space would
+	        // put ut outside of the border
+	        if (direction === 0) {
+	          	// move up, bounce down if needed
+	          	let dist = this.front_y - this.border;
+	          	let line_len = getRandomInt(3, dist/this.vert_const);
+	          	new_y -= line_len;
+	        } else if (direction === 1) {
+	          	// move down, bounce up if needed  
+	          	let dist = p.height - this.front_y - this.border;
+	          	let line_len = getRandomInt(3, dist/this.vert_const);
+	          	new_y += line_len;
+	        } else if (direction === 2) {
+	          	// move right, bounce left if needed  
+	          	let dist = p.width - this.border - this.front_x;
+	          	let line_len = getRandomInt(3, dist/this.hori_const);
+	          	new_x += line_len
+	        } else if (direction === 3){
+	          	// move left, bounce right if needed  
+	          	let dist = this.front_x - this.border;
+	          	let line_len = getRandomInt(3, dist/this.hori_const);
+	          	new_x -= line_len;
+	        }
+	        this.points.push([new_x, new_y]);
+	        this.strokeWeights.push(weight);
+	        this.front_x = new_x;
+	        this.front_y = new_y;
+	              
+	        if(this.orientation === 0){
+	          	this.orientation = 1;
+	        } else{
+	          	this.orientation = 0;
+	        }
+	        	this.steps--;
+	        } else if (this.steps > -100){
+	        	// hold drawing
+	        	this.steps--
+	      	} else{
+	        	this.steps = 100;
+	        	this.points = [[this.front_x, this.front_y]];
+	      	}	
+    	}
   }
-}
 
 
 function getRandomInt(min, max) {

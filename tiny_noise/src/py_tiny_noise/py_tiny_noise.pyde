@@ -5,9 +5,9 @@
 from random import randint
 
 cell_size = 8
-noise_const = 0.05
+noise_const = 1
 time = 0 
-time_vel = 1
+time_vel = TWO_PI/240
 time_frailty = 20 # how much should time move noise?
 slant = map(random(0, 1), 0, 1, -2, 2)
 
@@ -51,5 +51,5 @@ def draw():
             elif c > 0.45:
                 fill(palette[2])
                 square(x * cell_size, y * cell_size, cell_size)
-    time += radians(time_vel)
+    time += time_vel
     

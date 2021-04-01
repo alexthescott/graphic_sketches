@@ -1,6 +1,6 @@
-# Tiny Noise
+# [Tiny Noise](https://openprocessing.org/sketch/1154224)
 
-A tricolored representation of [perlin noise](https://en.wikipedia.org/wiki/Perlin_noise) in 2D. 1 of 6 color palettes is chosen, and the third dimension of the perlin space is the sum cos(n) and sin(n), allowing for a perfict gif loop. This is why the gifs 'dance' with eachother.
+A tricolored representation of [perlin noise](https://en.wikipedia.org/wiki/Perlin_noise) in 2D. 1 of 6 color palettes is chosen, and the third dimension of the perlin space is the sum cos(n) and sin(n), allowing for a perfect gif loop. This is why the gifs 'dance' with each other.
 
 <p float="left">
 	<img width="400" src="./gifs/tiny_noise_gif_0.gif">

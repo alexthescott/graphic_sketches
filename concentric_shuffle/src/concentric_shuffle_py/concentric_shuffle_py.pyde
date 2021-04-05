@@ -26,18 +26,15 @@ def setup():
             x_pos = map(cos(stick_angle), -1, 1, width/10.0*c, width-width/10.0*c)
             y_pos = map(sin(stick_angle), -1, 1, height/10.0*c, height-height/10.0*c)
             pos = PVector(x_pos, y_pos)
-            pos_copy = pos.copy()
             new_stick = Stick(pos, stick_angle, draw_color)
             sticks.append(new_stick)
-            meta_info.append([pos_copy, stick_angle, draw_color])
+            meta_info.append([pos.copy(), stick_angle, draw_color])
             stick_angle += angle_step
     shuffle(meta_info)
-    # meta_info[0], meta_info[1] = meta_info[1], meta_info[0]
 
 def draw():
     r, g, b = palette[0]
     background(r, g, b)
-    stroke(255)
     global flip
     for s in sticks:
         s.draw()
@@ -49,9 +46,6 @@ def draw():
             s.goal_color = meta_info[i][2]
             s.new_goal = True
         shuffle(meta_info)
-        
-    if frameCount == 300:
-        saveFrame()
     
 class Stick():
     def __init__(self, pos, angle, draw_color):
@@ -59,9 +53,9 @@ class Stick():
         self.pos = pos
         self.pos_start = self.pos
         self.goal = pos
-        self.new_goal = False
         self.angle = angle
         self.goal_angle = angle
+        self.new_goal = False
         self.end_t = 2.0 * frameRate
         self.start_t = self.end_t
         self.draw_color = draw_color
@@ -75,12 +69,12 @@ class Stick():
         end_x = self.pos.x + x_len
         end_y = self.pos.y + y_len
         
-        # strokeWeight(1) # DEBUG
+        # DEBUG LINE! 
+        # strokeWeight(1) 
         # stroke(100)
         # line(self.goal.x, self.goal.y, self.pos.x, self.pos.y)
         
         strokeWeight(6)
-        # draw the line!
         r, g, b = self.draw_color
         stroke(r, g, b)
         line(start_x, start_y, end_x, end_y)
@@ -93,11 +87,11 @@ class Stick():
             self.pos_start = self.pos
             self.new_goal = False
         
-        if self.pos != self.goal:
+        if self.start_t <= self.end_t:
             percent = self.start_t / self.end_t
             x_dist = map(percent, 0, 1, self.pos_start.x, self.goal.x)
             y_dist = map(percent, 0, 1, self.pos_start.y, self.goal.y)
-            angle_dist = map(percent, 0, 2, self.angle, self.goal_angle)
+            angle_dist = map(percent, 0, 1, self.angle, self.goal_angle)
             self.pos.x = x_dist
             self.pos.y = y_dist
             self.angle = angle_dist
@@ -111,8 +105,10 @@ class Stick():
             
             self.draw_color = (new_r, new_g, new_b)
             
-            self.start_t += 0.1
-        
+            self.start_t += 0.2
+
+# Although this function never gets called, it will live in this file 
+# in the event that I will need it again ¯\_㋡_/¯
 def angle_between(o, p):
     # given two PVectors, return the angle from the origin to the point relative to the x-axis
     delta_y = p.y - o.y

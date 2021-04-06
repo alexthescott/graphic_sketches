@@ -29,19 +29,19 @@ function setup() {
   background(r, g, b)  
   strokeWeight(6)
   for(var c = 1; c < circle_count + 1; c++){
-    stick_angle = 0.0
-    angle_step = TWO_PI / (sticks_count / circle_count)
-    draw_color = palette[c]
+    var stick_angle = 0.0
+    var angle_step = TWO_PI / (sticks_count / circle_count)
+    var draw_color = palette[c]
     for(var i = 0; i < sticks_count / circle_count; i++){
-      x_pos = map(cos(stick_angle), -1, 1, width/10 * c, width-width/10 * c)
-      y_pos = map(sin(stick_angle), -1, 1, height/10 * c, width-height/10 * c)
-      pos = createVector(x_pos, y_pos)
+      var x_pos = map(cos(stick_angle), -1, 1, width/10 * c, width-width/10 * c)
+      var y_pos = map(sin(stick_angle), -1, 1, height/10 * c, width-height/10 * c)
+      var pos = createVector(x_pos, y_pos)
       sticks.push(new stick(pos, stick_angle, draw_color))
       meta_info.push([pos.copy(), stick_angle, draw_color])
       stick_angle += angle_step
     }
   }
-  meta_info = shuffle(meta_info)
+  meta_info = shuffle_list(meta_info)
 }
 
 function draw() {
@@ -61,7 +61,7 @@ function draw() {
       sticks[i].goal_angle = meta_info[i][1]
       sticks[i].goal_color = meta_info[i][2]
     }
-    meta_info = shuffle(meta_info)
+    meta_info = shuffle_list(meta_info)
   }
 }
 
@@ -125,16 +125,16 @@ class stick {
 
 function randint(min, max){
   // min and max should are inclusive
-  return Math.floor(random() * Math.floor(1+max-min)) + min
+  return Math.floor(Math.random() * Math.floor(1+max-min)) + min
 }
 
 function shuffle_list(the_array){
   // https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm
   let end = the_array.length
-  new_list = the_array.slice()
+  let new_list = the_array.slice()
   for(var i = 0; i < end; i++){
-    swap_i = randint(i, end-1) 
-    temp_var = new_list[i]
+    let swap_i = randint(i, end-1) 
+    let temp_var = new_list[i]
     new_list[i] = new_list[swap_i]
     new_list[swap_i] = temp_var
   }

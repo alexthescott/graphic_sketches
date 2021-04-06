@@ -16,7 +16,6 @@ palette = palettes[randint(0, len(palettes)-1)]
 def setup():
     r, g, b = palette[0]
     background(r, g, b)
-    stroke(255)
     size(400, 400)
     for c in range(1, circle_count+1):
         stick_angle = 0.0

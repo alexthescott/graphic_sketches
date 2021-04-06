@@ -1,7 +1,7 @@
 # Sketches
 
 ---
-<img width="50" src="./concentric_shuffle/gifs/cs_gif_thumb.gif"> [concentric_shuffle](https://github.com/alexthescott/p5.js-sketches/tree/main/concentric_shuffle) <img height="20" src="./icons/py.png"> 
+<img width="50" src="./concentric_shuffle/gifs/cs_gif_thumb.gif"> [concentric_shuffle](https://github.com/alexthescott/p5.js-sketches/tree/main/concentric_shuffle) <img height="20" src="./icons/js.png"> <img height="20" src="./icons/py.png"> 
 ---
 <img width="50" src="./worm_noise/gifs/worm_noise_gif_thumb.gif"> [worm_noise](https://github.com/alexthescott/p5.js-sketches/tree/main/worm_noise) <img height="20" src="./icons/py.png"> 
 ---

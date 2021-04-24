@@ -7,7 +7,7 @@ from random import randint
 cell_size = 8
 noise_const = 1
 time = 0 
-time_vel = TWO_PI/240
+time_vel = TWO_PI/360
 time_frailty = 20 # how much should time move noise?
 slant = map(random(0, 1), 0, 1, -2, 2)
 

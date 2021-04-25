@@ -25,10 +25,10 @@ function draw() {
   background(0, 0, 32);
   for (let y = 0; y < vert_count; y++){
     for (let t = 0; t < hori_count; t++){
-        y_pos = map(sin(time + t / 6 + y / 2), -1, 1, 75, width - 75)
-        x_pos = map(y, 0, vert_count - 1, 50, height - 50)  
-        stroke(colors[t])
-        circle(x_pos, y_pos, 35)
+      let y_pos = map(sin(time + t / 6 + y / 2), -1, 1, 75, width - 75)
+      let x_pos = map(y, 0, vert_count - 1, 50, height - 50)  
+      stroke(colors[t])
+      circle(x_pos, y_pos, 35)
     }
   }
   time += vel

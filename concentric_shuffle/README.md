@@ -1,4 +1,4 @@
-# concentric shuffle
+# [concentric shuffle](https://openprocessing.org/sketch/1176296)
 
 A series of rounded lines are drawn in a series of 4 circles. After 4 seconds, the lines on the circle find a new position, corresponding to a new color. The lines drift into place, and the process starts again. Either 72 or 108 lines are drawn to the screen.
 

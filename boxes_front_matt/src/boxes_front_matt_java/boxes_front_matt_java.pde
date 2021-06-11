@@ -1,3 +1,11 @@
+// Alex Scott - 6/11/21 recreating, and remixing @mattdesl's boxes -- front  
+//  -> https://twitter.com/mattdesl/status/1396876632594554887
+//    
+//  threw my occasional twist on things
+//    - 50% chance for an alternate palette
+//    - 25% chance for a squircle shape, instead of a sharp line
+//    - 20% chance for a alternate blending mode (10% for multiply, 10% for hard_light)
+
 import java.lang.Math;
 
 int[] og_palette = {#000000, #FFFFFF, #9A9899, #3C5DE7, #B0587C, 
@@ -18,7 +26,7 @@ int[][][] objs = new int[obj_limit][3][2];
 void setup() {
   size(400, 400);
   int palette_choice = randint(0, 1);
-  squircle = randint(0, 1) == 0;
+  squircle = randint(0, 3) == 0;
   palette = (palette_choice == 0) ? og_palette : alt_palette;
   
   blend_chance = randint(0, 100);

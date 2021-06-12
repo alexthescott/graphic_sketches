@@ -4,7 +4,7 @@
 
 let time = 0
 let vel = NaN // TWO_PI / 300 assigned in setup()
-let hori_count= 14
+let hori_count = 14
 let vert_count = 7
 let colors = ["#F94144", "#F65A38", "#F3722C",
               "#F68425", "#F8961E", "#F9AF37",

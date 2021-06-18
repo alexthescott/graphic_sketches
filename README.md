@@ -1,6 +1,8 @@
 # Sketches
 
 ---
+<img width="50" src="./carpet_noise/gifs/cn_thumb.gif"> [carpet noise](https://github.com/alexthescott/p5.js-sketches/tree/main/carpet_noise) <img height="20" src="./icons/js.png"> <img height="20" src="./icons/py.png">
+---
 <img width="50" src="./boxes_front_matt/gifs/bfm_thumb.gif"> [boxes front matt](https://github.com/alexthescott/p5.js-sketches/tree/main/boxes_front_matt) <img height="20" src="./icons/js.png"> <img height="20" src="./icons/py.png"> <img height="22" src="./icons/java.png">  
 ---
 <img width="50" src="./circle_rain_sin/gifs/circle_rain_sin_gif_thumb.gif"> [circle rain sin](https://github.com/alexthescott/p5.js-sketches/tree/main/circle_rain_sin) <img height="20" src="./icons/js.png"> <img height="20" src="./icons/py.png"> <img height="22" src="./icons/java.png">  

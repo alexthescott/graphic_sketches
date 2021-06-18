@@ -1,5 +1,5 @@
 # carpet noise -> alexthescott 6/18/21
-# three palettes, layered 2D perlin nosie, perfect loop
+# three palettes, layered 2D perlin noise, perfect loop
 
 from random import randint
 
@@ -54,8 +54,8 @@ def draw():
             
             # full blocks
             if n2 <= 96:
-                c1 = palette[2]
-                c2 = palette[3]
+                c1 = palette[3]
+                c2 = palette[4]
                 r = map(x, 0, rows, c1[0], c2[0])
                 g = map(x, 0, rows, c1[1], c2[1])
                 b = map(x, 0, rows, c1[2], c2[2])

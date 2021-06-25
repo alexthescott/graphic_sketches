@@ -11,7 +11,7 @@ if (getRandomInt(0, 1) == 1){
 var walker;
 
 function setup() {
-  createCanvas(750, 1000);
+  createCanvas(375, 500);
   walker = new random_walk();
   frameRate(20)
   strokeCap(SQUARE);
@@ -82,12 +82,12 @@ class random_walk {
 	          	new_y -= line_len;
 	        } else if (direction === 1) {
 	          	// move down, bounce up if needed  
-	          	let dist = p.height - this.front_y - this.border;
+	          	let dist = height - this.front_y - this.border;
 	          	let line_len = getRandomInt(3, dist/this.vert_const);
 	          	new_y += line_len;
 	        } else if (direction === 2) {
 	          	// move right, bounce left if needed  
-	          	let dist = p.width - this.border - this.front_x;
+	          	let dist = width - this.border - this.front_x;
 	          	let line_len = getRandomInt(3, dist/this.hori_const);
 	          	new_x += line_len
 	        } else if (direction === 3){

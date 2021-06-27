@@ -33,7 +33,7 @@ def draw():
     noStroke()
     noFill()
     
-    noise_x = int(map(noise(time), 0, 1, 0, width / tile_size))
+    noise_x = int(map(noise(time), 0, 1, 0, 1 + width / tile_size))
     noise_y = int(map(noise(time+1), 0, 1, 1, 1 + height / tile_size))
     
     old_m_x, m_x, = m_x, mouseX / tile_size

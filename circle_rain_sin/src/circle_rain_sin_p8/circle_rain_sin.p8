@@ -7,7 +7,7 @@ __lua__
 
 function _init()
 	hori_count = 7
-	vert_count = 6
+	vert_count = 12
 	colors = {8,9,10,11,3,12}
 	t=0
 end
@@ -15,9 +15,9 @@ end
 function _draw()
 	cls()
 	for x=1,hori_count,1 do
-		for y=1,vert_count,1 do
-			y_pos = 16+96*(sin(t+y/22+x/14)+1)/2
-			a_circ(x*16,y_pos,colors[y])
+		for y=1,vert_count+1,1 do
+			y_pos = 16+96*(sin(t+y/44+x/14)+1)/2
+			a_circ(x*16,y_pos,colors[y\2])
 		end
 	end
 	t+=0.005

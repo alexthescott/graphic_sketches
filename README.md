@@ -1,6 +1,6 @@
 # Sketches
 ---
-<img width="50" src="./rain_orbit/gifs/rain_orbit_thumb.gif"> [rain_orbit](https://github.com/alexthescott/graphic_sketches/tree/main/grayscale_triangles) <img height="20" src="./icons/pico8.png">
+<img width="50" src="./rain_orbit/gifs/rain_orbit_thumb.gif"> [rain_orbit](https://github.com/alexthescott/graphic_sketches/tree/main/rain_orbit) <img height="20" src="./icons/pico8.png">
 ---
 <img width="50" src="./grayscale_triangles/gifs/gs_thumb.gif"> [grayscale triangles](https://github.com/alexthescott/graphic_sketches/tree/main/grayscale_triangles) <img height="20" src="./icons/js.png"> <img height="20" src="./icons/py.png"> 
 ---

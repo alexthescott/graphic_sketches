@@ -1,6 +1,6 @@
 # Sketches
 ---
-<img width="50" src="./rain_orbit/gifs/rain_orbit_thumb.gif"> [rain_orbit](https://github.com/alexthescott/graphic_sketches/tree/main/rain_orbit) <img height="20" src="./icons/pico8.png">
+<img width="50" src="./rain_orbit/gifs/rain_orbit_thumb.gif"> [rain_orbit](https://github.com/alexthescott/graphic_sketches/tree/main/rain_orbit) <img height="20" src="./icons/pico8.png"> <img height="20" src="./icons/js.png"> <img height="20" src="./icons/py.png"> <img height="22" src="./icons/java.png"> 
 ---
 <img width="50" src="./grayscale_triangles/gifs/gs_thumb.gif"> [grayscale triangles](https://github.com/alexthescott/graphic_sketches/tree/main/grayscale_triangles) <img height="20" src="./icons/js.png"> <img height="20" src="./icons/py.png"> 
 ---
@@ -8,7 +8,7 @@
 ---
 <img width="50" src="./boxes_front_matt/gifs/bfm_thumb.gif"> [boxes front matt](https://github.com/alexthescott/graphic_sketches/tree/main/boxes_front_matt) <img height="20" src="./icons/js.png"> <img height="20" src="./icons/py.png"> <img height="22" src="./icons/java.png">  
 ---
-<img width="50" src="./circle_rain_sin/gifs/circle_rain_sin_gif_thumb.gif"> [circle rain sin](https://github.com/alexthescott/graphic_sketches/tree/main/circle_rain_sin) <img height="20" src="./icons/js.png"> <img height="20" src="./icons/py.png"> <img height="22" src="./icons/java.png"> <img height="22" src="./icons/pico8.png">  
+<img width="50" src="./circle_rain_sin/gifs/circle_rain_sin_gif_thumb.gif"> [circle rain sin](https://github.com/alexthescott/graphic_sketches/tree/main/circle_rain_sin) <img height="22" src="./icons/pico8.png"> <img height="20" src="./icons/js.png"> <img height="20" src="./icons/py.png"> <img height="22" src="./icons/java.png">  
 ---
 <img width="50" src="./concentric_shuffle/gifs/cs_gif_thumb.gif"> [concentric_shuffle](https://github.com/alexthescott/graphic_sketches/tree/main/concentric_shuffle) <img height="20" src="./icons/js.png"> <img height="20" src="./icons/py.png"> 
 ---

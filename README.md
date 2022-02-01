@@ -1,6 +1,8 @@
 # Sketches
 ---
-[ten-thousand of something](https://github.com/alexthescott/graphic_sketches/tree/main/tenthousand_of_something) <img height="20" src="./icons/py.png"> 
+<img width="50" src="./velvet_dithering/images/cat_1_dither.png"> [velvet dithering](https://github.com/alexthescott/graphic_sketches/tree/main/velvet_dithering) <img height="20" src="./icons/py.png"> 
+---
+<img width="50" src="./tenthousand_of_something/images/jan_1_thumb.png"> [ten-thousand of something](https://github.com/alexthescott/graphic_sketches/tree/main/tenthousand_of_something) <img height="20" src="./icons/py.png"> 
 ---
 <img width="50" src="./rain_orbit/gifs/rain_orbit_thumb.gif"> [rain_orbit](https://github.com/alexthescott/graphic_sketches/tree/main/rain_orbit) <img height="20" src="./icons/pico8.png"> <img height="20" src="./icons/js.png"> <img height="20" src="./icons/py.png"> <img height="22" src="./icons/java.png"> 
 ---

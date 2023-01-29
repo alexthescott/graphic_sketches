@@ -5,7 +5,7 @@
 let t=0
 let x=0
 
-function draw_mouse(x,y,size=1,angle=0){
+function draw_mouse(x,y,size=2,angle=0){
   push()
   beginShape();
   strokeWeight(2)
@@ -27,18 +27,13 @@ function draw_mouse_circle(radius, count){
   for(let i=x; i<TWO_PI+x; i+=PI/count){
     let x=cos(i)*radius
     let y=sin(i)*radius
-    draw_mouse(width/2+x,height/2+y,1,3.25*PI/2+i)
+    draw_mouse(width/2+x,height/2+y,2,3.25*PI/2+i)
   }
 }
 
-function keyPressed(){
-  if (key === 's'){
-    saveGif('mouse_thumnail', 3)
-  }
-}
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 800);
   fill(0)
   stroke(255)
   strokeWeight(1.2)
@@ -48,7 +43,7 @@ function setup() {
 
 function draw() {
   background(0);
-  draw_mouse(width/2-5,height/2-10)
+  draw_mouse(width/2-10,height/2-20)
   draw_mouse_circle(width/12, 4)
   draw_mouse_circle(width/6, 6)
   draw_mouse_circle(width/4, 8)

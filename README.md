@@ -1,5 +1,7 @@
 # Sketches
 ---
+<img width="50" src="./mouse_study_01/gifs/mouse_thumbnail.gif"> [mouse_study 01](https://github.com/alexthescott/graphic_sketches/tree/main/mouse_study_01) <img height="20" src="./icons/js.png"> 
+---
 <img width="50" src="./velvet_dithering/images/cat_1_dither.png"> [velvet dithering](https://github.com/alexthescott/graphic_sketches/tree/main/velvet_dithering) <img height="20" src="./icons/py.png"> 
 ---
 <img width="50" src="./tenthousand_of_something/images/jan_1_thumb.png"> [ten-thousand of something](https://github.com/alexthescott/graphic_sketches/tree/main/tenthousand_of_something) <img height="20" src="./icons/py.png"> 

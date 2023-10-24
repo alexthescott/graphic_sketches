@@ -1,4 +1,5 @@
 # Sketches
+<img width="50" src="./mouse_study_02/gifs/mouse_thumbnail_02.gif"> [mouse_study 02](https://github.com/alexthescott/graphic_sketches/tree/main/mouse_study_02) <img height="20" src="./icons/js.png"> 
 ---
 <img width="50" src="./mouse_study_01/gifs/mouse_thumbnail.gif"> [mouse_study 01](https://github.com/alexthescott/graphic_sketches/tree/main/mouse_study_01) <img height="20" src="./icons/js.png"> 
 ---
